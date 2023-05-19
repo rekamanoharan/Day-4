@@ -1,0 +1,242 @@
+1.a.IIFE
+(function(array){
+             for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+             })([1,2,3,4])
+
+ANONYMOUS
+var odd=function(array){
+                  for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+                };
+                odd([1,2,3,4,5])
+
+b.ANONYMOUS
+                 
+var result=function(str) {
+                    str = str.toLowerCase().split(' ');
+                    for (var i = 0; i < str.length; i++) {
+                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                    } 
+                    console.log(str.join(' '));
+                  };
+                  result("Reka is my name")
+
+IIFE
+
+(function(str) {
+                    str = str.toLowerCase().split(' ');
+                    for (var i = 0; i < str.length; i++) {
+                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                    } 
+                    console.log(str.join(' '));
+                  })("hi hOw are you");
+
+c.Anonymous
+
+var result=function(array) {
+ let sum=0;
+                     for(var i = 0 ; i< array.length ; i++){
+                     sum=sum+array[i];
+                     }
+                     console.log(sum);
+                  };
+                  result([1,1,8]);
+
+IIFE
+
+ (function(array) {
+ let sum=0;
+                     for(var i = 0 ; i< array.length ; i++){
+                     sum=sum+array[i];
+                     }
+                     console.log(sum);
+                  })([1,1,8]);
+d.anonymous:
+
+var prime=function(numArray){
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  };
+                  prime([1,2,3,4,5])
+iife:
+
+(function(numArray){
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  })([5,6,7,8]);
+
+e.anonymous:
+var check=function(str) {
+    var rev=str.split("").reverse().join("");
+  
+    if(rev == str){
+        console.log("palindrome");
+    }else{
+    console.log("not a palindrome");
+    }
+                };
+   
+check("fine")
+
+iife:
+
+(function(str) {
+    var rev=str.split("").reverse().join("");
+  
+    if(rev == str){
+        console.log("palindrome");
+    }else{
+     console.log("not a palindrome");
+     }
+                 
+})("madam")
+
+f.anonymous:
+
+var median=function(arr1,arr2){
+    const combinedArray=[...arr1,...arr2];
+    combinedArray.sort((a,b)=>a-b);
+    const length=combinedArray.length
+    const mid=Math.floor(length/2);
+    if(length%2==0){
+        const median=(combinedArray[mid-1]+combinedArray[mid])/2;
+        console.log(median);
+    }else{
+        const median=combinedArray[mid];
+        console.log(median);
+    }
+    };
+    median([1,2,4,6,8],[3,5,7,9,10]);
+
+iife:
+
+(function(arr1,arr2){
+    const combinedArray=[...arr1,...arr2];
+    combinedArray.sort((a,b)=>a-b);
+    const length=combinedArray.length
+    const mid=Math.floor(length/2);
+    if(length%2==0){
+        const median=(combinedArray[mid-1]+combinedArray[mid])/2;
+        console.log(median);
+    }else{
+        const median=combinedArray[mid];
+        console.log(median);
+    }
+    })([1,2,4,6,8],[3,5,7,9,10]);
+    
+
+
+
+
+g.anonymous:
+
+var dup=function(arr) {
+	let unique = [];
+	arr.forEach(element => {
+		if (!unique.includes(element)) {
+			unique.push(element);
+		}
+	});
+	console.log(unique);
+};
+
+dup(["apple","orange","apple"])
+
+iife:
+
+(function(arr) {
+	let unique = [];
+	arr.forEach(element => {
+		if (!unique.includes(element)) {
+			unique.push(element);
+		}
+	})
+  console.log(unique);
+})(["apple","orange","apple"])
+
+h.anonymous:
+
+var rotateArray1=function(nums,k) {
+ for (let i = 0; i < k; i++) {
+      nums.unshift(nums.pop());
+}
+ console.log(nums);
+};
+
+rotateArray1([1,2,3],2);
+
+iife:
+
+(function(nums,k) {
+for (let i = 0; i < k; i++) {
+      nums.unshift(nums.pop());
+
+  }
+console.log(nums);
+})([1,2,3],3)
+
+
+2.a.var odd=(array) => {
+                  for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+                }
+                odd([1,2,3,4,5]);
+
+b.var result=(str)=> {
+                    str = str.toLowerCase().split(' ');
+                    for (var i = 0; i < str.length; i++) {
+                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                    } 
+                    console.log(str.join(' '));
+                  }
+                  result("Reka is my name");
+c.var result=(array)=>{
+ let sum=0;
+                     for(var i = 0 ; i< array.length ; i++){
+                     sum=sum+array[i];
+                     }
+                     console.log(sum);
+                  }
+                  result([1,1,8]);
+
+d.var prime=function(numArray){
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  };
+                  prime([5,6,7,8]);
+
+e.var check=(str) =>{
+    var rev=str.split("").reverse().join("");
+  
+    if(rev == str){
+        console.log("palindrome");
+    }else{
+    console.log("not a palindrome");
+    }
+                }
+                check("madam");
